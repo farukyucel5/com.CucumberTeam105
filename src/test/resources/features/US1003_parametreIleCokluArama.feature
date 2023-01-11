@@ -1,15 +1,25 @@
-Feature: US1003 kullanıcı parametre olarak girirlen degerleri aratır
+
+Feature: US1003 Kullanici parametre olarak girilen degerleri aratir
 
 
-  Scenario: TC03 kullanıcı parametreli method ile Nutella aratır
+  Scenario: TC03 Kullanici Parametreli method ile Nutella aratir
+
     Given kullanici amazon anasayfaya gider
-    Then amazon arama kutusuna "Nutella" yazıp aratir
+    Then amazon arama kutusuna "Nutella" yazip aratir
     And arama sonuclarinin "Nutella" icerdigini test eder
     And sayfayi kapatir
 
 
-  Scenario:  TC03 kullanıcı parametreli method ile java aratır
+  Scenario: TC04 Kullanici Parametreli method ile Java aratir
     Given kullanici amazon anasayfaya gider
-    Then amazon arama kutusuna "Java" yazıp aratir
+    Then amazon arama kutusuna "Java" yazip aratir
     And arama sonuclarinin "Java" icerdigini test eder
+    And 5 saniye bekler
+    And sayfayi kapatir
+
+
+  Scenario: TC05 Kullanici Parametreli method ile Samsung aratir
+    Given kullanici amazon anasayfaya gider
+    Then amazon arama kutusuna "Hiyar" yazip aratir
+    And arama sonuclarinin "Hiyar" icerdigini test eder
     And sayfayi kapatir
