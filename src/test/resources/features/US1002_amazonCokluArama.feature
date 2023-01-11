@@ -1,6 +1,6 @@
 Feature: US1002 Kullanıcı amazon anasayfada birden fazla ürün aratır.
 
-  @wip
+
   Scenario: TC02 Kullanıcı urunleri aratıp test edebilmeli
     Given kullanici amazon anasayfaya gider
     Then amazon arama kutusuna nutella yazıp aratir

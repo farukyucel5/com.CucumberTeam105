@@ -58,4 +58,15 @@ public class AmazonStepDefinitions {
         String expectedKelime="Samsung";
         Assert.assertTrue(actualAramaSonucu.contains(expectedKelime));
     }
+
+    @Then("amazon arama kutusuna {string} yazıp aratir")
+    public void amazonAramaKutusunaYazıpAratir(String aranacakKelime) {
+        amazonPage.amazonAramaKutusu.sendKeys(aranacakKelime, Keys.ENTER);
+    }
+
+    @And("arama sonuclarinin {string} icerdigini test eder")
+    public void aramaSonuclarininIcerdiginiTestEder(String arananKelime) {
+        String actualAramaSonucu=amazonPage.aramaSonucuElementi.getText();
+        Assert.assertTrue(actualAramaSonucu.contains(arananKelime));
+    }
 }
