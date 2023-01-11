@@ -1,4 +1,3 @@
-@wip
 Feature: US1003 kullanıcı parametre olarak girirlen degerleri aratır
 
 
