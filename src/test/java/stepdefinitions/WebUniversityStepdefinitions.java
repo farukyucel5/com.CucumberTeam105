@@ -26,7 +26,6 @@ public class WebUniversityStepdefinitions {
 
         Set<String> windowHandlesSeti= Driver.getDriver().getWindowHandles();
         String ikinciSayfaHandleDegeri="";
-
         for (String each : windowHandlesSeti) {
             if (!each.equals(ilkSayfaHandleDegeri)){
                 ikinciSayfaHandleDegeri=each;
