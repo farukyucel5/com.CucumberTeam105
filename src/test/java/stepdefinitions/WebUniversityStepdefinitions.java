@@ -1,6 +1,8 @@
 package stepdefinitions;
 
 import io.cucumber.java.en.Then;
+import org.junit.Assert;
+import org.openqa.selenium.interactions.Actions;
 import pages.WebUniversityPage;
 import utilities.Driver;
 
@@ -36,30 +38,39 @@ public class WebUniversityStepdefinitions {
     }
     @Then("username kutusuna deger yazar")
     public void username_kutusuna_deger_yazar() {
+        webUniversityPage.username.sendKeys("faruk");
 
     }
     @Then("password kutusuna deger yazar")
     public void password_kutusuna_deger_yazar() {
+        webUniversityPage.password.sendKeys("12345");
 
     }
     @Then("webunuversity login butonuna basar")
     public void webunuversity_login_butonuna_basar() {
+        webUniversityPage.submitBtn.click();
 
     }
     @Then("Popup ta cikan yazinin validation failed oldugunu test eder")
     public void popup_ta_cikan_yazinin_validation_failed_oldugunu_test_eder() {
+        String alert_text = Driver.getDriver().switchTo().alert().getText();
+        String expectedText="fail";
+        Assert.assertTrue(alert_text.contains(expectedText));
 
     }
     @Then("OK diyerek popup i kapatir")
     public void ok_diyerek_popup_i_kapatir() {
+        Driver.getDriver().switchTo().alert().accept();
 
     }
     @Then("ilk sayfaya geri doner")
     public void ilk_sayfaya_geri_doner() {
+        Driver.getDriver().switchTo().window(ilkSayfaHandleDegeri);
 
     }
     @Then("ilk sayfaya dondugunu test eder")
     public void ilk_sayfaya_dondugunu_test_eder() {
-
+        String expectedHandle=Driver.getDriver().getWindowHandle();
+        Assert.assertEquals(ilkSayfaHandleDegeri,expectedHandle);
     }
 }

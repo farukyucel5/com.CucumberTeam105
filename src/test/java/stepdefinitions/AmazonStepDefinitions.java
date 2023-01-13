@@ -31,7 +31,7 @@ public class AmazonStepdefinitions {
     }
     @Then("sayfayi kapatir")
     public void sayfayi_kapatir() {
-        Driver.closeDriver();
+        Driver.quitDriver();
     }
 
     @Then("amazon arama kutusuna Java yazip aratir")
