@@ -31,7 +31,7 @@ public class AmazonStepdefinitions {
     }
     @Then("sayfayi kapatir")
     public void sayfayi_kapatir() {
-        Driver.quitDriver();
+        Driver.closeDriver();
     }
 
     @Then("amazon arama kutusuna Java yazip aratir")
@@ -99,5 +99,10 @@ public class AmazonStepdefinitions {
         String actualUrl= Driver.getDriver().getCurrentUrl();
 
         Assert.assertTrue(actualUrl.contains(arananKelime));
+    }
+
+    @And("acilan tum sayfalari kapatir")
+    public void acilanTumSayfalariKapatir() {
+        Driver.quitDriver();
     }
 }

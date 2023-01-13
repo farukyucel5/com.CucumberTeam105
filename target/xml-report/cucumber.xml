@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="25.907">
+    <testcase classname="US1006 Kullanici configuration dosyasindaki bilgilerle login olabilmeli" name="TC09 Gecerli kullanici adi ve sifre ile Pozitif Login Testi" time="16.82">
+        <failure message="element click intercepted: Element &lt;button type=&quot;submit&quot; class=&quot;btn red radius-5 mt-4 w-100&quot;&gt;...&lt;/button&gt; is not clickable at point (959, 541). Other element would receive the click: &lt;a onclick=&quot;cookie...();&quot;&gt;Accept&lt;/a&gt;&#10;  (Session info: chrome=109.0.5414.74)&#10;Build info: version: '4.5.3', revision: '4b786a1e430'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.17'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [b3097f79ebeb8699eed8d05d2af32e5b, clickElement {id=19bc7d6c-a80f-464a-9d98-4f416905fec1}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.74, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\Lenovo\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:64230}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64230/devtoo..., se:cdpVersion: 109.0.5414.74, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on WINDOWS (b3097f79ebeb8699eed8d05d2af32e5b)] -&gt; xpath: //button[text()='Login']]&#10;Session ID: b3097f79ebeb8699eed8d05d2af32e5b" type="org.openqa.selenium.ElementClickInterceptedException">
+            <![CDATA[Given kullanici "qdUrl" anasayfaya gider....................................passed
+Then ilk sayfa login linkine click yapar....................................passed
+And kullanici kutusuna "qdGecerliUsername" yazar............................passed
+And password kutusuna "qdGecerliPassword" yazar.............................passed
+Then login butonuna basar...................................................failed
+And basarili giris yapildigini test eder....................................skipped
+And 3 saniye bekler.........................................................skipped
+
+StackTrace:
+org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button type="submit" class="btn red radius-5 mt-4 w-100">...</button> is not clickable at point (959, 541). Other element would receive the click: <a onclick="cookie...();">Accept</a>
+  (Session info: chrome=109.0.5414.74)
+Build info: version: '4.5.3', revision: '4b786a1e430'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b3097f79ebeb8699eed8d05d2af32e5b, clickElement {id=19bc7d6c-a80f-464a-9d98-4f416905fec1}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.74, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\Lenovo\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:64230}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64230/devtoo..., se:cdpVersion: 109.0.5414.74, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (b3097f79ebeb8699eed8d05d2af32e5b)] -> xpath: //button[text()='Login']]
+Session ID: b3097f79ebeb8699eed8d05d2af32e5b
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at com.sun.proxy.$Proxy23.click(Unknown Source)
+	at stepdefinitions.QualitydemyStepdefinitions.login_butonuna_basar(QualitydemyStepdefinitions.java:30)
+	at ✽.login butonuna basar(file:///C:/Asoftware/com.CucumberTeam105/src/test/resources/features/US1006_ParametreIlePozitifLoginTesti.feature:10)
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="US1012 Window Testi" name="TC17 Kullanici yeni acilan window'u test edebilmeli" time="8.487">
+        <system-out>
+            <![CDATA[Given kullanici "wduUrl" anasayfaya gider...................................passed
+Then Login Portal elementine kadar asagi iner...............................passed
+And Login Portal a tiklar...................................................passed
+Then Acilan yeni window a gecer.............................................passed
+And username kutusuna deger yazar...........................................passed
+And password kutusuna deger yazar...........................................passed
+Then webuniversity login butonuna basar.....................................passed
+And Popup ta cikan yazinin validation failed oldugunu test eder.............passed
+And OK diyerek popup i kapatir..............................................passed
+Then ilk sayfaya geri doner.................................................passed
+And ilk sayfaya dondugunu test eder.........................................passed
+And acilan tum sayfalari kapatir............................................passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>
