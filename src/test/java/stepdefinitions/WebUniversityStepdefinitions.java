@@ -2,7 +2,6 @@ package stepdefinitions;
 
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
-import org.openqa.selenium.interactions.Actions;
 import pages.WebUniversityPage;
 import utilities.Driver;
 
